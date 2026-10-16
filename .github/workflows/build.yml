@@ -24,6 +24,10 @@ jobs:
           flutter-version: '3.24.x'
           channel: 'stable'
 
+      # Tworzy brakującą strukturę katalogu Androida
+      - name: Re-create Android project files
+        run: flutter create . --platforms=android
+
       - name: Install Dependencies
         run: flutter pub get
 
